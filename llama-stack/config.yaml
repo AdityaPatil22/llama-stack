@@ -1,0 +1,19 @@
+providers:
+  model:
+    - id: default
+      type: llama3.2:3b
+      model_path: /models/llama3.2:3b.gguf
+
+  memory:
+    - id: chat-memory
+      type: sqlite
+      path: ./memory.db
+
+agents:
+  - id: chat-agent
+    model: llama3.2:3b
+    memory: chat-memory
+    system_prompt: |
+      You are a helpful assistant.
+      Use past conversation when relevant.
+
