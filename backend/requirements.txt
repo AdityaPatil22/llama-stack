@@ -2,3 +2,5 @@ fastapi
 uvicorn
 pydantic
 pydantic-settings
+llama-stack-client>=0.4.0
+python-multipart
